@@ -1,28 +1,19 @@
 const jsonServer = require('json-server')
-const faker = require('faker');
 const server = jsonServer.create()
-const db = require('./data/db');
-console.log(db);
-const router = jsonServer.router(db());
+const db = require('./data/db.js');
+const router = jsonServer.router('./data/db.json');
+const middlewares = jsonServer.defaults()
+console.log(typeof db());
 
 
+
+server.use(middlewares)
 server.use(router)
 console.log(process.env.PORT);
-server.listen(3000, () => {
-  console.log(`JSON Server is running at ${process.env.PORT || 3000}`)
-})
-
-
-
-
-
-
-
-
-
-
-
-
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+  console.log(`JSON Server is running at ${port}`)
+});
 
 
 // const exec = require('child_process').exec;
