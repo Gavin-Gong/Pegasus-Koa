@@ -1,1 +1,1 @@
-web: npm run mock
+web: node mock.js
