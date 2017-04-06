@@ -1,45 +1,21 @@
 const _ = require('lodash');
 const faker = require('faker');
-
+const postSchema = require('./schema/post');
+const tagSchema = require('./schema/tag');
+// console.log(postSchema(100));
 // faker.locale = "zh_CN";
 
 module.exports = () => {
   return {
     // posts data
-    posts: _.times(100, (n) => {
-      return {
-        id: n,
-        name: faker.name.findName(),
-        avatar: faker.internet.avatar(),
-        body: faker.lorem.lines(),
-        summary: faker.lorem.paragraph(6),
-        mark: faker.lorem.paragraphs(4),
-        banner: faker.image.image(500, 200),
-        created_at: faker.date.between(new Date(2017, 0, 1), new Date()),
-        tags: _.times(3, (n) => {
-          return {
-            id: n,
-            title: faker.lorem.word(),
-            summary: faker.lorem.sentence(30),
-          };
-        }),
-      };
-    }),
-    tags: _.times(1, (n) => {
-      return {
-        id: n,
-      };
-    }),
+    posts: postSchema(100),
+    tags: tagSchema(20),
     topics: _.times(1, (n) => {
       return {
         id: n,
       };
     }),
-    archives: _.times(1, (n) => {
-      return {
-        id: n,
-      };
-    }),
+    archives:postSchema(100),
     profile: {
       name: faker.name.findName(),
       address: faker.address.city(),
