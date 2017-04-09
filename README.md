@@ -8,3 +8,4 @@ Build Pegasus API With Koa
 
 ### 问题
 - [ ] js互相引用
+- [ ] inlinestyle 伪类

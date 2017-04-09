@@ -8,7 +8,7 @@ module.exports = (times) => {
     return {
       id: n,
       title: faker.name.findName(),
-      banner: faker.image.image(500, 200),
+      banner: `${faker.image.image(500, 200)}?id=${n}`,
       body: faker.lorem.lines(),
       summary: faker.lorem.paragraph(6),
       created_at: faker.date.between(new Date(2017, 0, 1), new Date()),
