@@ -2,6 +2,8 @@ const _ = require('lodash');
 const faker = require('faker');
 const postSchema = require('./schema/post');
 const tagSchema = require('./schema/tag');
+const topicSchema = require('./schema/topic');
+const aboutSchema = require('./schema/about');
 // console.log(postSchema(100));
 // faker.locale = "zh_CN";
 
@@ -10,11 +12,7 @@ module.exports = () => {
     // posts data
     posts: postSchema(100),
     tags: tagSchema(20),
-    topics: _.times(1, (n) => {
-      return {
-        id: n,
-      };
-    }),
+    topics: topicSchema(20),
     archives:postSchema(100),
     profile: {
       name: faker.name.findName(),
@@ -27,9 +25,7 @@ module.exports = () => {
         {},
       ],
     },
-    about: {
-
-    },
+    about: aboutSchema(),
     settings: {
 
     },
