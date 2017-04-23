@@ -19,11 +19,9 @@ module.exports = () => {
       address: faker.address.city(),
       bio: faker.lorem.sentence(),
       avatar: faker.image.avatar(100, 100),
-      posts_count: faker.random.number(20, 100),
-      days_count: faker.random.number(10, 1000),
-      socials: [
-        {},
-      ],
+      post_count: faker.random.number(20, 100),
+      streak_day_count: faker.random.number(10, 1000),
+      socials: [],
     },
     about: aboutSchema(),
     settings: {

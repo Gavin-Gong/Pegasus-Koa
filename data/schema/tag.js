@@ -13,7 +13,7 @@ module.exports = (times) => {
       title: faker.lorem.word(),
       post_count,
       posts: postSchema(post_count),
-      banner: `${faker.image.image(500, 200)}?id=${n}`,
+      banner: `${faker.image.image(920, 240)}?id=${n}`,
     };
   });
 }
