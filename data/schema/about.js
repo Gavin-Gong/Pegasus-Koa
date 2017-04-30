@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const faker = require('faker');
-// faker.locale = "zh_CN";
+faker.locale = "zh_CN";
 
 module.exports = () => {
   return {

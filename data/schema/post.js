@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const faker = require('faker');
 // const topicSchema = require('./topic');
-// faker.locale = "zh_CN";
+faker.locale = "zh_CN";
 // console.log('schema', topicSchema)
 module.exports = (times) => {
   return _.times(times, (n) => {

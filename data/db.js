@@ -5,7 +5,7 @@ const tagSchema = require('./schema/tag');
 const topicSchema = require('./schema/topic');
 const aboutSchema = require('./schema/about');
 // console.log(postSchema(100));
-// faker.locale = "zh_CN";
+faker.locale = "zh_CN";
 
 module.exports = () => {
   return {
