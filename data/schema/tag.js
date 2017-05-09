@@ -1,8 +1,30 @@
 const _ = require('lodash');
-const faker = require('faker');
+const faker = require('faker/locale/zh_CN');
 const postSchema = require('./post');
+const imgList = require('../imgList');
 
 faker.locale = "zh_CN";
+const tagArr = [
+  '随感',
+  '日记',
+  'Code',
+  '诗歌',
+  'Psy',
+  'ES6',
+  'PS',
+  'AI',
+  'CDR',
+  '配色',
+  'UI',
+  'UX',
+  'Matarial Design',
+  '规范',
+  'Markdown',
+  'PPT',
+  '原型',
+  'Logo',
+];
+
 
 module.exports = (times) => {
   return _.times(times, (n) => {
@@ -10,10 +32,10 @@ module.exports = (times) => {
     return {
       id: n,
       created_at: faker.date.between(new Date(2017, 0, 1), new Date()),
-      title: faker.lorem.word(),
+      title: tagArr[n] ? tagArr[n] : faker.lorem.word(),
       post_count,
       posts: postSchema(post_count),
-      banner: `${faker.image.image(920, 240)}?id=${n}`,
+      banner: imgList[faker.random.number(20)],
     };
   });
 }

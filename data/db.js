@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const faker = require('faker');
+const faker = require('faker/locale/zh_CN');
 const postSchema = require('./schema/post');
 const tagSchema = require('./schema/tag');
 const topicSchema = require('./schema/topic');
@@ -13,7 +13,6 @@ module.exports = () => {
     posts: postSchema(100),
     tags: tagSchema(20),
     topics: topicSchema(20),
-    archives:postSchema(100),
     profile: {
       name: faker.name.findName(),
       address: faker.address.city(),
@@ -26,6 +25,23 @@ module.exports = () => {
     about: aboutSchema(),
     settings: {
 
+    },
+    comments: [
+      {},
+    ],
+    statistics: {
+      post_count: faker.random.number(100) + 8,
+      word_count: 10000 + faker.random.number(10000),
+      streak_week_count: faker.random.number(2) + 1,
+      yesterday: _.times(24, (n) => {
+        return {
+          user_count: faker.random.number(100) + 10,
+          visit_count: faker.random.number(100) + 20,
+        };
+      }),
+      week_post_statistics: _.times(12, (n) => {
+        return faker.random.number(100) + 2;        
+      }),
     },
   };
 };
