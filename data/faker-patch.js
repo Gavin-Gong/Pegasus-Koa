@@ -1,4 +1,4 @@
-let faker = require('faker');
+let faker = require('faker/locale/zh_CN');
 
 const md = {
   genList() {}
