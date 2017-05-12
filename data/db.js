@@ -20,7 +20,27 @@ module.exports = () => {
       avatar: faker.image.avatar(100, 100),
       post_count: faker.random.number(20, 100),
       streak_day_count: faker.random.number(10, 1000),
-      socials: [],
+      socials: [
+        {
+          type: 'github',
+          url: 'https://github.com/gavin-gong',
+        },
+        {
+          type: 'weibo',
+          url: 'https://github.com/gavin-gong',
+        },
+        {
+          type: 'dribbble',
+          url: 'https://dribbble.com/gavin-gong',
+        },
+        {
+          type: 'twitter',
+          url: 'https://github.com/gavin-gong',
+        },
+      ],
+      email: 'kefengong@gmail.com',
+      intro: faker.lorem.paragraphs(10),
+      job: 'UI 设计师'
     },
     about: aboutSchema(),
     settings: {

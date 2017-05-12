@@ -19,7 +19,7 @@ server.use((req, res, next) => {
   if (req.method === 'POST') {
     req.body.created_at = Date.now();
     if (req.body.banner === '') {
-      req.body.banner = imgList[faker.random.number(20)];
+      req.body.banner = imgList[faker.random.number(24)];
     }
   }
   next()

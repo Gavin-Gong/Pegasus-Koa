@@ -19,6 +19,11 @@ const imgList = [
   'http://opazkqh2d.bkt.clouddn.com/17-5-2/34115815-file_1493716714317_17cc2.jpg',
   'http://opazkqh2d.bkt.clouddn.com/17-5-2/63002375-file_1493716713533_fdde.jpg',
   'http://opazkqh2d.bkt.clouddn.com/17-5-2/40773667-file_1493717372450_13dc1.jpg',
+  'http://opazkqh2d.bkt.clouddn.com/17-5-11/23357744-file_1494466168081_16a18.jpg',
+  'http://opazkqh2d.bkt.clouddn.com/17-5-11/43260158-file_1494466167885_5d6.jpg',
+  'http://opazkqh2d.bkt.clouddn.com/17-5-11/60818644-file_1494466167455_c806.jpg',
+  'http://opazkqh2d.bkt.clouddn.com/17-5-11/89428390-file_1494466167672_136e4.jpg',
+  'http://opazkqh2d.bkt.clouddn.com/17-5-11/11854898-file_1494466167211_9f20.jpg'
 ];
 
 module.exports = imgList;
