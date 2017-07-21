@@ -1,3 +1,4 @@
+/* tslint: disable */
 const Koa = require('koa');
 const logger = require('koa-logger');
 const mongoose = require('mongoose');
@@ -7,7 +8,7 @@ require('./controllers/article');
 const app = new Koa();
 
 const db = mongoose.connect(config.mongodb);
-mongoose.connection.on('error', (err) => {
+mongoose.connection.on('error', (err:any) => {
   console.error('conneect mongodb fail\n', err);
 })
 mongoose.connection.once('open', () => {
