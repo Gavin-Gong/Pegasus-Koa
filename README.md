@@ -1,4 +1,17 @@
 
+
+## TODO List
+- [ ] GraphQL
+- [ ] JWT
+- [ ] static
+- [ ] remote mongodb database
+- [ ] pm2
+- [ ] Rx
+- [ ] Docute 
+- [ ] CI 
+
+
+
 ## TS
 
 #### type

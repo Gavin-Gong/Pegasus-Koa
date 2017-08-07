@@ -1,4 +1,3 @@
-/* tslint: disable */
 const router = require('koa-router')();
 
 const article = require('../controllers/article');

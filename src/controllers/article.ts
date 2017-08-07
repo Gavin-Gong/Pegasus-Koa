@@ -1,7 +1,5 @@
-/* tslint: disable */
 const articleModel = require('../models/article');
 
-// module.exprots = {
   exports.getArticleList = (ctx:any, next:any) => {
     ctx.body = "my router";
     next();
@@ -15,4 +13,3 @@ const articleModel = require('../models/article');
     })
     next();
   }
-// };

@@ -15,14 +15,17 @@ mongoose.connection.once('open', () => {
   console.log('connected to mongodb!');
 });
 
-
-// mongoose.connect.on('error', console.error);
-// response
 app
   .use(router.routes())
   .use(router.allowedMethods())
   .use(logger());
 
-app.listen(8890, () => {
+app.use(async (ctx: any) => {
+  console.log(JSON.stringify(ctx))
+})
+app.listen(8890, async (ctx: any) => {
+  console.log(JSON.stringify(ctx));
   console.log('The server is listening on port 8890!');
 });
+
+export {}
