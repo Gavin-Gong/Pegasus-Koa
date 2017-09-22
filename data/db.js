@@ -14,10 +14,10 @@ module.exports = () => {
     tags: tagSchema(20),
     topics: topicSchema(20),
     profile: {
-      name: faker.name.findName(),
+      name: "Luna",
       address: faker.address.city(),
       bio: faker.lorem.sentence(),
-      avatar: faker.image.avatar(100, 100),
+      avatar: "http://opazkqh2d.bkt.clouddn.com/17-5-20/78810947-file_1495276980237_27da.jpg",
       post_count: faker.random.number(20, 100),
       streak_day_count: faker.random.number(10, 1000),
       socials: [
@@ -60,7 +60,7 @@ module.exports = () => {
         };
       }),
       week_post_statistics: _.times(12, (n) => {
-        return faker.random.number(100) + 2;        
+        return faker.random.number(100) + 2;
       }),
     },
   };
