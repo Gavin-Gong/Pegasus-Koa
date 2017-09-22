@@ -1,11 +1,22 @@
-# Pegasus-Koa
-Build Pegasus API With Koa
-
-1. 服务器进程守护 -> pm2
-2. WebHook -> push -> server clone repo -> restart server
-3. json 数据定义
 
 
-### 问题
-- [ ] js互相引用
-- [ ] inlinestyle 伪类
+## TODO List
+- [ ] vscode debug 流程
+- [ ] GraphQL
+- [ ] JWT
+- [ ] static
+- [ ] remote mongodb database
+- [ ] pm2
+- [ ] Docute 
+- [ ] CI 
+- [ ] code 表
+
+
+
+
+## restful return msg
+{
+  data: {},
+  code: 2,
+  msg: 'xx'
+}

@@ -1,3 +1,4 @@
+/* tslint: disable */
 const mongoose = require('mongoose');
 
 const articleSchema = mongoose.Schema({
@@ -22,7 +23,7 @@ articleSchema.methods.getArticle = () => {
 
 // new Schema()
 
-const Article = mongoose.model('Article', articleSchema);
+const Article = mongoose.model("Article", articleSchema);
 // console.log()
 
 module.exports = Article;
