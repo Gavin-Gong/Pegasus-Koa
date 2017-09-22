@@ -1,44 +1,22 @@
 
 
 ## TODO List
+- [ ] vscode debug 流程
 - [ ] GraphQL
 - [ ] JWT
 - [ ] static
 - [ ] remote mongodb database
 - [ ] pm2
-- [ ] Rx
 - [ ] Docute 
 - [ ] CI 
+- [ ] code 表
 
 
 
-## TS
 
-#### type
-- Array 
-- Boolean
-- Number
-- String
-- Enum
-- null & undefiend
-- Tuple
-- Void
-
-enum Godness { diana, luna, ashe}
-
-let g: Godness = Godness.diana
-
-let x: [string, number]
-
-
-#### Class
-
-extends
-constructor
-super
-static
-abstract
-public
-private
-protected
-readonly
+## restful return msg
+{
+  data: {},
+  code: 2,
+  msg: 'xx'
+}

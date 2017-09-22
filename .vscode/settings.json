@@ -4,5 +4,4 @@
   "npm-intellisense.importQuotes": "'",
   "npm-intellisense.importLinebreak": ";\r\n",
   "npm-intellisense.importDeclarationType": "const",
-  "typescript.check.tscVersion": false
 }

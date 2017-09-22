@@ -5,9 +5,13 @@ const article = require('../controllers/article');
 console.log('controller', article);
 router
   .get('/articles', (ctx:any,  next:any) => {
-    ctx.body = "article router";
+    ctx.body = "article routers";
     next();
   })
-router.post('/articles', article.create);
+router.post('/articles', (ctx:any, next:any) => {
+  article.create(ctx, next)
+  ctx.body = "article routers";
+  // next()
+});
 
 module.exports = router;
