@@ -450,7 +450,7 @@ var htmlCodes2 = [
   '[转载链接](http://www.jianshu.com/p/a8d723c89d03)'
 ].join("\n\r");
 
-// var htmlCodes2 = 
+// var htmlCodes2 =
 const bodyArr = [
   htmlCodes,
   htmlCodes2,
@@ -477,9 +477,9 @@ const tagArr = [
 ];
 
 const TopicArr = [
-    'Workflow教程', 
-    'Ps系列入门', 
-    'HCI', 
+    'Workflow教程',
+    'Ps系列入门',
+    'HCI',
     'chrome拓展推荐',
     'VPS 推荐',
     'AI教程',
