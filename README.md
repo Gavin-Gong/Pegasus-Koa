@@ -1,7 +1,10 @@
 
 
 ## TODO List
+- [ ] CURD flow
 - [ ] vscode debug 流程
+- [ ] validate
+- [ ] code 表
 - [ ] GraphQL
 - [ ] JWT
 - [ ] static
@@ -9,7 +12,6 @@
 - [ ] pm2
 - [ ] Docute 
 - [ ] CI 
-- [ ] code 表
 
 
 

@@ -4,12 +4,16 @@ const articleModel = require('../models/article');
     ctx.body = "my router";
     next();
   }
-  exports.create = (ctx:any, next:any) => { 
-    const newArticle = new articleModel({title: `new article-${new Date()}`});
-    newArticle.save((err:any) => {
-      if (err) throw err;
-      console.log("saved a article");
-      console.log(this);
-    })
+  exports.create = async (ctx:any, next:any) => { 
+    try {
+      await articleModel.create({
+        title: `title - ${Date.now()}`,
+        body: `body, ${Math.random()}`
+      })
+    } catch(e) {
+      throw e
+    } finally {
+      console.log('wow')
+    }
     next();
   }

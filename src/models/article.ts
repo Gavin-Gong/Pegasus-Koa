@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const articleSchema = mongoose.Schema({
   title: String,
   created_at: {type: Date, default: Date.now},
+  body: String
 });
 
 
@@ -23,7 +24,6 @@ articleSchema.methods.getArticle = () => {
 
 // new Schema()
 
-const Article = mongoose.model("Article", articleSchema);
-// console.log()
+const Article = mongoose.model("article", articleSchema);
 
 module.exports = Article;

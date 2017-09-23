@@ -20,11 +20,9 @@ app
   .use(logger());
 
 app.use(async (ctx: any, next: any) => {
-  console.log(JSON.stringify(ctx))
   await next()
 })
 app.listen(8890, async (ctx: any) => {
-  console.log(JSON.stringify(ctx));
   console.log('The server is listening on port 8890!');
 });
 
