@@ -3,10 +3,11 @@
 ## TODO List
 - [ ] CURD flow
 - [ ] vscode debug 流程
-- [ ] validate
+- [ ] validate middleware
+- [ ] 路由拆分
+- [ ] JWT, 用户 & 管理员区分
 - [ ] code 表
 - [ ] GraphQL
-- [ ] JWT
 - [ ] static
 - [ ] remote mongodb database
 - [ ] pm2

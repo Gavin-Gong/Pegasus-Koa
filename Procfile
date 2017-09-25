@@ -1,1 +1,1 @@
-web: node mock.js
+web: npm run build-ts && node dist/app.js
