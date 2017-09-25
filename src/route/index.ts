@@ -1,22 +1,22 @@
-const router = require('koa-router')();
+import * as KoaRouter from 'koa-router';
+import * as article from '../controllers/article';
 
-const article = require('../controllers/article');
+import { Context } from 'koa';
 
-console.log('controller', article);
+let router = new KoaRouter()
+
 router
-  .get('/articles', (ctx:any,  next:any) => {
+  .get('/articles', (ctx: Context, next: Function) => {
     ctx.body = "article routers";
     next();
   })
-router.post('/articles', (ctx:any, next:any) => {
+router.post('/articles', (ctx: Context, next: Function) => {
   article.create(ctx, next)
   ctx.body = "article routers";
-  // next()
 });
-router.get('/lab', async (ctx: any, next: any) => {
+router.get('/lab', async(ctx: Context, next: Function) => {
   ctx.body = 'JSON.stringify(ctx)'
   await next()
-  // ctx.body = 'gg'
 })
 
-module.exports = router;
+export default router;

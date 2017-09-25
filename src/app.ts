@@ -1,13 +1,18 @@
-const Koa = require('koa');
-const logger = require('koa-logger');
-const mongoose = require('mongoose');
-const config = require('./config');
-const router = require('./route');
-require('./controllers/article');
+import * as Koa from 'koa';
+import * as logger from 'koa-logger';
+import * as mongoose from 'mongoose';
+import config from './config';
+import router from './route';
+
+// type
+import {
+  Context
+} from 'koa'
+
 const app = new Koa();
 
 const db = mongoose.connect(config.mongodb);
-mongoose.connection.on('error', (err: any) => {
+mongoose.connection.on('error', err => {
   console.error('conneect mongodb fail\n', err);
 })
 mongoose.connection.once('open', () => {
@@ -19,10 +24,10 @@ app
   .use(router.allowedMethods())
   .use(logger());
 
-app.use(async (ctx: any, next: any) => {
+app.use(async(ctx: Context, next: Function) => {
   await next()
 })
-app.listen(8890, async (ctx: any) => {
+app.listen(8890, () => {
   console.log('The server is listening on port 8890!');
 });
 

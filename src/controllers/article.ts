@@ -1,19 +1,23 @@
-const articleModel = require('../models/article');
+import articleModel from '../models/article';
 
-  exports.getArticleList = (ctx:any, next:any) => {
-    ctx.body = "my router";
-    next();
+import {
+  Context
+} from 'koa'
+
+export const getArticleList = (ctx: Context, next: Function) => {
+  ctx.body = "my router";
+  next();
+}
+export const create = async(ctx: Context, next: Function) => {
+  try {
+    await articleModel.create({
+      title: `title - ${Date.now()}`,
+      body: `body, ${Math.random()}`
+    })
+  } catch (e) {
+    throw e
+  } finally {
+    console.log('wow')
   }
-  exports.create = async (ctx:any, next:any) => { 
-    try {
-      await articleModel.create({
-        title: `title - ${Date.now()}`,
-        body: `body, ${Math.random()}`
-      })
-    } catch(e) {
-      throw e
-    } finally {
-      console.log('wow')
-    }
-    next();
-  }
+  next();
+}
