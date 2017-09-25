@@ -13,6 +13,6 @@ articleSchema.methods.getArticle = () => {
 };
 
 // define Model
-const Article = mongoose.model("article", articleSchema);
+const Article = mongoose.model("articles", articleSchema);
 
 export default Article;

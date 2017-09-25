@@ -1,4 +1,5 @@
 import * as Koa from 'koa';
+import * as bodyparse from 'koa-bodyparser'
 import * as logger from 'koa-logger';
 import * as mongoose from 'mongoose';
 import config from './config';
@@ -20,12 +21,13 @@ mongoose.connection.once('open', () => {
   console.log('connected to mongodb!');
 });
 
+app.use(bodyparse())
+
 // route
 app
   .use(router.routes())
   .use(router.allowedMethods())
   .use(logger());
-
 
 // listen on port 8890
 app.listen(8890, () => {

@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.25",
     "@types/koa-logger": "^2.0.1",
     "@types/koa-router": "^7.1.1",
     "@types/lodash": "^4.14.74",
@@ -25,6 +26,7 @@
     "faker": "^4.1.0",
     "json-server": "^0.9.6",
     "koa": "^2.0.39",
+    "koa-bodyparser": "2",
     "koa-logger": "^2.0.1",
     "koa-router": "^7.1.1",
     "lodash": "^4.17.4",

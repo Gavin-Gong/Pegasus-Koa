@@ -11,18 +11,13 @@ let router = new KoaRouter()
 // article route
 router
   .get('/articles', (ctx: Context, next: Function) => {
-    ctx.body = "article routers";
     next();
   })
-router.post('/articles', (ctx: Context, next: Function) => {
-  article.create(ctx, next)
-  ctx.body = "article routers";
-});
+router.post('/articles', article.create);
 
 // lab route
 router.get('/lab', async(ctx: Context, next: Function) => {
-  ctx.body = 'JSON.stringify(ctx)'
-  await next()
+   next()
 })
 
 export default router;

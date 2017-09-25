@@ -14,10 +14,11 @@ export const create = async(ctx: Context, next: Function) => {
       title: `title - ${Date.now()}`,
       body: `body, ${Math.random()}`
     })
+    ctx.body = 'wow'
+    next()
   } catch (e) {
     throw e
   } finally {
-    console.log('wow')
+    console.log(ctx.request.body)
   }
-  next();
 }
