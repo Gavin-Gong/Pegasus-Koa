@@ -4,4 +4,5 @@ git add .
 git commit -m "release"
 git push origin gh-pages
 echo "released!"
-git checkout master
+git checkout master -f
+rm -rf dist
