@@ -10,9 +10,7 @@ let router = new KoaRouter()
 
 // article route
 router
-  .get('/articles', (ctx: Context, next: Function) => {
-    next();
-  })
+  .get('/articles', article.get)
 router.post('/articles', article.create);
 
 // lab route

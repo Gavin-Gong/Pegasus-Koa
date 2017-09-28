@@ -1,24 +1,35 @@
 import articleModel from '../models/article';
-
 import {
   Context
 } from 'koa'
 
-export const getArticleList = (ctx: Context, next: Function) => {
-  ctx.body = "my router";
+export const get = async(ctx: Context, next: Function) => {
+  // query
+  ctx.body = await articleModel.find({
+    title: ctx.query.title
+  })
   next();
 }
 export const create = async(ctx: Context, next: Function) => {
   try {
-    await articleModel.create({
+    const data = await articleModel.create({
       title: `title - ${Date.now()}`,
       body: `body, ${Math.random()}`
     })
-    ctx.body = 'wow'
-    next()
+    ctx.body = {
+      data,
+      code: 200,
+      msg: 'success'
+    }
   } catch (e) {
     throw e
   } finally {
-    console.log(ctx.request.body)
+    next()
+  }
+}
+
+export const del = async(ctx: Context, next: Function) {
+  try {
+
   }
 }
