@@ -11,9 +11,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const article_1 = require("../models/article");
 exports.get = (ctx, next) => __awaiter(this, void 0, void 0, function* () {
     // query
-    ctx.body = yield article_1.default.find({
-        title: ctx.query.title
-    });
+    ctx.body = yield article_1.default.find();
     next();
 });
 exports.create = (ctx, next) => __awaiter(this, void 0, void 0, function* () {

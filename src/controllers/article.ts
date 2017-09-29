@@ -5,9 +5,7 @@ import {
 
 export const get = async(ctx: Context, next: Function) => {
   // query
-  ctx.body = await articleModel.find({
-    title: ctx.query.title
-  })
+  ctx.body = await articleModel.find()
   next();
 }
 export const create = async(ctx: Context, next: Function) => {
