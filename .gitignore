@@ -39,6 +39,6 @@ jspm_packages
 # ignore yarn
 yarn.lock
 
-# dist/**/*
+dist/**/*
 
 .DS_Store
