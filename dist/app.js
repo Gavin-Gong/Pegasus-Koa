@@ -23,6 +23,6 @@ app
     .use(logger());
 // listen on port 8890
 app.listen(process.env.PORT || 8890, () => {
-    console.log('The server is listening on port 8890!');
+    console.log(`The server is listening on port ${process.env.PORT || 8890}!`);
 });
 //# sourceMappingURL=app.js.map

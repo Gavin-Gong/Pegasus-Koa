@@ -18,10 +18,7 @@ exports.get = (ctx, next) => __awaiter(this, void 0, void 0, function* () {
 });
 exports.create = (ctx, next) => __awaiter(this, void 0, void 0, function* () {
     try {
-        const data = yield article_1.default.create({
-            title: `title - ${Date.now()}`,
-            body: `body, ${Math.random()}`
-        });
+        const data = yield article_1.default.create(ctx.request.body);
         ctx.body = {
             data,
             code: 200,
@@ -36,9 +33,8 @@ exports.create = (ctx, next) => __awaiter(this, void 0, void 0, function* () {
     }
 });
 exports.del = (ctx, next) => __awaiter(this, void 0, void 0, function* () {
-    try {
-    }
-    finally {
-    }
+    // try {
+    // const data = await
+    // }
 });
 //# sourceMappingURL=article.js.map

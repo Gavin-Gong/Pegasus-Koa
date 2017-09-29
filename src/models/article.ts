@@ -15,6 +15,13 @@ const articleSchema = new mongoose.Schema({
     type: Array,
     default: []
   },
+
+  // status
+  status: {
+    type: String,
+    default: 'release',
+    enum: ['release', 'draft', 'del']
+  }
 });
 
 // define Model

@@ -12,10 +12,7 @@ export const get = async(ctx: Context, next: Function) => {
 }
 export const create = async(ctx: Context, next: Function) => {
   try {
-    const data = await articleModel.create({
-      title: `title - ${Date.now()}`,
-      body: `body, ${Math.random()}`
-    })
+    const data = await articleModel.create(ctx.request.body)
     ctx.body = {
       data,
       code: 200,
@@ -28,8 +25,8 @@ export const create = async(ctx: Context, next: Function) => {
   }
 }
 
-export const del = async(ctx: Context, next: Function) {
-  try {
-
-  }
+export const del = async(ctx: Context, next: Function) => {
+  // try {
+    // const data = await
+  // }
 }
